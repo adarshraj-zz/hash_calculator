@@ -6,62 +6,58 @@
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
-namespace MD5_Calculator
-{
-	partial class MainForm
-	{
-		/// <summary>
-		/// Designer variable used to keep track of non-visual components.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
-		
-		/// <summary>
-		/// Disposes resources used by the form.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing) {
-				if (components != null) {
-					components.Dispose();
-				}
-			}
-			base.Dispose(disposing);
-		}
-		
-		/// <summary>
-		/// This method is required for Windows Forms designer support.
-		/// Do not change the method contents inside the source code editor. The Forms designer might
-		/// not be able to load this method if it was changed manually.
-		/// </summary>
-		private void InitializeComponent()
-		{
+namespace HashCalculator {
+    partial class MainForm {
+        /// <summary>
+        /// Designer variable used to keep track of non-visual components.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Disposes resources used by the form. 
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing) {
+            if (disposing) {
+                if (components != null) {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
+
+        /// <summary>
+        /// This method is required for Windows Forms designer support.
+        /// Do not change the method contents inside the source code editor. The Forms designer might
+        /// not be able to load this method if it was changed manually.
+        /// </summary>
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.txtString = new System.Windows.Forms.TextBox();
             this.txtMD5 = new System.Windows.Forms.TextBox();
             this.txtSHA1 = new System.Windows.Forms.TextBox();
             this.txtSHA512 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblMd5 = new System.Windows.Forms.Label();
+            this.lblSha1 = new System.Windows.Forms.Label();
+            this.lblSha512 = new System.Windows.Forms.Label();
             this.txtSHA256 = new System.Windows.Forms.TextBox();
             this.txtSHA384 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblSha384 = new System.Windows.Forms.Label();
+            this.lblSha256 = new System.Windows.Forms.Label();
             this.btnString = new System.Windows.Forms.RadioButton();
             this.btnFile = new System.Windows.Forms.RadioButton();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.btnSelectFile = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpEntryField = new System.Windows.Forms.GroupBox();
+            this.grpAlgo = new System.Windows.Forms.GroupBox();
             this.chkUpper = new System.Windows.Forms.CheckBox();
             this.ofdOpenFile = new System.Windows.Forms.OpenFileDialog();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCompareTool = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.lblAuthor = new System.Windows.Forms.Label();
+            this.grpEntryField.SuspendLayout();
+            this.grpAlgo.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtString
@@ -106,29 +102,29 @@ namespace MD5_Calculator
             this.txtSHA512.TabIndex = 10;
             this.txtSHA512.TabStop = false;
             // 
-            // label2
+            // lblMd5
             // 
-            this.label2.Location = new System.Drawing.Point(16, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "MD5 :";
+            this.lblMd5.Location = new System.Drawing.Point(16, 24);
+            this.lblMd5.Name = "lblMd5";
+            this.lblMd5.Size = new System.Drawing.Size(37, 17);
+            this.lblMd5.TabIndex = 5;
+            this.lblMd5.Text = "MD5 :";
             // 
-            // label3
+            // lblSha1
             // 
-            this.label3.Location = new System.Drawing.Point(16, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "SHA1 :";
+            this.lblSha1.Location = new System.Drawing.Point(16, 50);
+            this.lblSha1.Name = "lblSha1";
+            this.lblSha1.Size = new System.Drawing.Size(43, 17);
+            this.lblSha1.TabIndex = 6;
+            this.lblSha1.Text = "SHA1 :";
             // 
-            // label4
+            // lblSha512
             // 
-            this.label4.Location = new System.Drawing.Point(16, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "SHA512 :";
+            this.lblSha512.Location = new System.Drawing.Point(16, 145);
+            this.lblSha512.Name = "lblSha512";
+            this.lblSha512.Size = new System.Drawing.Size(58, 16);
+            this.lblSha512.TabIndex = 7;
+            this.lblSha512.Text = "SHA512 :";
             // 
             // txtSHA256
             // 
@@ -153,21 +149,21 @@ namespace MD5_Calculator
             this.txtSHA384.TabIndex = 9;
             this.txtSHA384.TabStop = false;
             // 
-            // label5
+            // lblSha384
             // 
-            this.label5.Location = new System.Drawing.Point(16, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "SHA384 :";
+            this.lblSha384.Location = new System.Drawing.Point(16, 108);
+            this.lblSha384.Name = "lblSha384";
+            this.lblSha384.Size = new System.Drawing.Size(58, 16);
+            this.lblSha384.TabIndex = 10;
+            this.lblSha384.Text = "SHA384 :";
             // 
-            // label6
+            // lblSha256
             // 
-            this.label6.Location = new System.Drawing.Point(16, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "SHA256 :";
+            this.lblSha256.Location = new System.Drawing.Point(16, 77);
+            this.lblSha256.Name = "lblSha256";
+            this.lblSha256.Size = new System.Drawing.Size(58, 16);
+            this.lblSha256.TabIndex = 11;
+            this.lblSha256.Text = "SHA256 :";
             // 
             // btnString
             // 
@@ -179,7 +175,7 @@ namespace MD5_Calculator
             this.btnString.TabStop = true;
             this.btnString.Text = "String :";
             this.btnString.UseVisualStyleBackColor = true;
-            this.btnString.CheckedChanged += new System.EventHandler(this.btnString_CheckedChanged);
+            this.btnString.CheckedChanged += new System.EventHandler(this.btnStringCheckedChanged);
             // 
             // btnFile
             // 
@@ -191,7 +187,7 @@ namespace MD5_Calculator
             this.btnFile.TabStop = true;
             this.btnFile.Text = "File :";
             this.btnFile.UseVisualStyleBackColor = true;
-            this.btnFile.CheckedChanged += new System.EventHandler(this.btnFile_CheckedChanged);
+            this.btnFile.CheckedChanged += new System.EventHandler(this.btnFileCheckedChanged);
             // 
             // txtFileName
             // 
@@ -208,38 +204,38 @@ namespace MD5_Calculator
             this.btnSelectFile.TabIndex = 3;
             this.btnSelectFile.Text = "...";
             this.btnSelectFile.UseVisualStyleBackColor = true;
-            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFile_Click);
+            this.btnSelectFile.Click += new System.EventHandler(this.btnSelectFileClick);
             // 
-            // groupBox1
+            // grpEntryField
             // 
-            this.groupBox1.Controls.Add(this.btnSelectFile);
-            this.groupBox1.Controls.Add(this.txtFileName);
-            this.groupBox1.Controls.Add(this.txtString);
-            this.groupBox1.Controls.Add(this.btnFile);
-            this.groupBox1.Controls.Add(this.btnString);
-            this.groupBox1.Location = new System.Drawing.Point(6, -1);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(537, 80);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
+            this.grpEntryField.Controls.Add(this.btnSelectFile);
+            this.grpEntryField.Controls.Add(this.txtFileName);
+            this.grpEntryField.Controls.Add(this.txtString);
+            this.grpEntryField.Controls.Add(this.btnFile);
+            this.grpEntryField.Controls.Add(this.btnString);
+            this.grpEntryField.Location = new System.Drawing.Point(6, -1);
+            this.grpEntryField.Name = "grpEntryField";
+            this.grpEntryField.Size = new System.Drawing.Size(537, 80);
+            this.grpEntryField.TabIndex = 4;
+            this.grpEntryField.TabStop = false;
             // 
-            // groupBox2
+            // grpAlgo
             // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtSHA384);
-            this.groupBox2.Controls.Add(this.txtSHA512);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtSHA256);
-            this.groupBox2.Controls.Add(this.txtMD5);
-            this.groupBox2.Controls.Add(this.txtSHA1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 79);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(537, 180);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
+            this.grpAlgo.Controls.Add(this.lblSha1);
+            this.grpAlgo.Controls.Add(this.lblSha256);
+            this.grpAlgo.Controls.Add(this.lblSha384);
+            this.grpAlgo.Controls.Add(this.lblMd5);
+            this.grpAlgo.Controls.Add(this.txtSHA384);
+            this.grpAlgo.Controls.Add(this.txtSHA512);
+            this.grpAlgo.Controls.Add(this.lblSha512);
+            this.grpAlgo.Controls.Add(this.txtSHA256);
+            this.grpAlgo.Controls.Add(this.txtMD5);
+            this.grpAlgo.Controls.Add(this.txtSHA1);
+            this.grpAlgo.Location = new System.Drawing.Point(6, 79);
+            this.grpAlgo.Name = "grpAlgo";
+            this.grpAlgo.Size = new System.Drawing.Size(537, 180);
+            this.grpAlgo.TabIndex = 3;
+            this.grpAlgo.TabStop = false;
             // 
             // chkUpper
             // 
@@ -250,7 +246,7 @@ namespace MD5_Calculator
             this.chkUpper.TabIndex = 5;
             this.chkUpper.Text = "UpperCase";
             this.chkUpper.UseVisualStyleBackColor = true;
-            this.chkUpper.CheckedChanged += new System.EventHandler(this.chkUpper_CheckedChanged);
+            this.chkUpper.CheckedChanged += new System.EventHandler(this.chkUpperCheckedChanged);
             // 
             // ofdOpenFile
             // 
@@ -264,7 +260,7 @@ namespace MD5_Calculator
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Clear All";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClear.Click += new System.EventHandler(this.btnClearClick);
             // 
             // btnCompareTool
             // 
@@ -274,7 +270,7 @@ namespace MD5_Calculator
             this.btnCompareTool.TabIndex = 13;
             this.btnCompareTool.Text = "Hash Comparison Tool";
             this.btnCompareTool.UseVisualStyleBackColor = true;
-            this.btnCompareTool.Click += new System.EventHandler(this.btnCompareTool_Click);
+            this.btnCompareTool.Click += new System.EventHandler(this.btnCompareToolClick);
             // 
             // btnAbout
             // 
@@ -286,15 +282,15 @@ namespace MD5_Calculator
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.BtnAboutClick);
             // 
-            // label1
+            // lblAuthor
             // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.Location = new System.Drawing.Point(173, 270);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "© WaxCodes";
+            this.lblAuthor.AutoSize = true;
+            this.lblAuthor.Enabled = false;
+            this.lblAuthor.Location = new System.Drawing.Point(173, 270);
+            this.lblAuthor.Name = "lblAuthor";
+            this.lblAuthor.Size = new System.Drawing.Size(54, 13);
+            this.lblAuthor.TabIndex = 15;
+            this.lblAuthor.Text = "© Adarsh";
             // 
             // MainForm
             // 
@@ -302,13 +298,13 @@ namespace MD5_Calculator
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 290);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAuthor);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnCompareTool);
             this.Controls.Add(this.chkUpper);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpAlgo);
+            this.Controls.Add(this.grpEntryField);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -316,39 +312,39 @@ namespace MD5_Calculator
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hash Calculator 0.1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Load += new System.EventHandler(this.MainFormLoad);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainFormDragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainFormDragEnter);
+            this.grpEntryField.ResumeLayout(false);
+            this.grpEntryField.PerformLayout();
+            this.grpAlgo.ResumeLayout(false);
+            this.grpAlgo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
-		private System.Windows.Forms.Button btnAbout;
-		private System.Windows.Forms.Button btnCompareTool;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox txtSHA384;
-		private System.Windows.Forms.TextBox txtSHA256;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox txtSHA512;
-		private System.Windows.Forms.TextBox txtSHA1;
-		private System.Windows.Forms.TextBox txtMD5;
+        }
+        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button btnCompareTool;
+        private System.Windows.Forms.Label lblSha256;
+        private System.Windows.Forms.Label lblSha384;
+        private System.Windows.Forms.TextBox txtSHA384;
+        private System.Windows.Forms.TextBox txtSHA256;
+        private System.Windows.Forms.Label lblSha512;
+        private System.Windows.Forms.Label lblSha1;
+        private System.Windows.Forms.Label lblMd5;
+        private System.Windows.Forms.TextBox txtSHA512;
+        private System.Windows.Forms.TextBox txtSHA1;
+        private System.Windows.Forms.TextBox txtMD5;
         private System.Windows.Forms.TextBox txtString;
         private System.Windows.Forms.RadioButton btnString;
         private System.Windows.Forms.RadioButton btnFile;
         private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.Button btnSelectFile;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpEntryField;
+        private System.Windows.Forms.GroupBox grpAlgo;
         private System.Windows.Forms.CheckBox chkUpper;
         private System.Windows.Forms.OpenFileDialog ofdOpenFile;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Label label1;
-	}
+        private System.Windows.Forms.Label lblAuthor;
+    }
 }
