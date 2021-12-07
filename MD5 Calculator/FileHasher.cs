@@ -1,38 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
+﻿using System.IO;
 using System.Security.Cryptography;
 
-namespace MD5_Calculator
-{
-    class FileHasher
-    {
-        private static FileStream GetFileStream(string filePath)
-        {
-            return(new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+namespace HashCalculator {
+    class FileHasher {
+        private static FileStream GetFileStream(string filePath) {
+            return (new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
         }
 
-        public static string GetHash(byte[] input)
-        {
+        public static string GetHash(byte[] input) {
             string fileHash;
             fileHash = System.BitConverter.ToString(input);
-            fileHash = fileHash.Replace("-","");
-            return fileHash.ToLower();    
+            fileHash = fileHash.Replace("-", "");
+            return fileHash.ToLower();
         }
 
-        public static string MD5Hash(string filePath)
-        {
+        public static string MD5Hash(string filePath) {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
             FileStream MD5Stream;
 
             MD5Stream = GetFileStream(filePath);
             byte[] fileMD5 = md5.ComputeHash(MD5Stream);
-            return(GetHash(fileMD5));
+            return (GetHash(fileMD5));
         }
 
-        public static string SHA1Hash(string filePath)
-        {
+        public static string SHA1Hash(string filePath) {
             SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
             FileStream Sha1Stream;
 
@@ -41,8 +32,7 @@ namespace MD5_Calculator
             return (GetHash(fileSha1));
         }
 
-        public static string SHA256Hash(string filePath)
-        {
+        public static string SHA256Hash(string filePath) {
             SHA256Managed sha256 = new SHA256Managed();
             FileStream Sha256Stream;
 
@@ -51,8 +41,7 @@ namespace MD5_Calculator
             return (GetHash(fileSha256));
         }
 
-        public static string SHA384Hash(string filePath)
-        {
+        public static string SHA384Hash(string filePath) {
             SHA384Managed sha384 = new SHA384Managed();
             FileStream Sha384Stream;
 
@@ -61,17 +50,13 @@ namespace MD5_Calculator
             return (GetHash(fileSha384));
         }
 
-
-        public static string SHA512Hash(string filePath)
-        {
+        public static string SHA512Hash(string filePath) {
             SHA512Managed sha512 = new SHA512Managed();
             FileStream Sha512Stream;
 
             Sha512Stream = GetFileStream(filePath);
             byte[] fileSha512 = sha512.ComputeHash(Sha512Stream);
             return (GetHash(fileSha512));
-
-
         }
     }
 }
