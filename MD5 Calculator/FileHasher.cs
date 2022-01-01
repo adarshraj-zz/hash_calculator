@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Security.Cryptography;
 
-namespace HashCalculator {
+namespace HashAlgo {
     class FileHasher {
         private static FileStream GetFileStream(string filePath) {
             return (new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));

@@ -1,4 +1,4 @@
-﻿namespace HashCalculator {
+﻿namespace HashAlgo {
     partial class HashCompare {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@
             this.btnFile.TabIndex = 2;
             this.btnFile.Text = "Open";
             this.btnFile.UseVisualStyleBackColor = true;
-            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
+            this.btnFile.Click += new System.EventHandler(this.btnFileClick);
             // 
             // txtHash
             // 
@@ -146,7 +146,7 @@
             this.btnCompare.TabIndex = 10;
             this.btnCompare.Text = "Check";
             this.btnCompare.UseVisualStyleBackColor = true;
-            this.btnCompare.Click += new System.EventHandler(this.btnCompare_Click);
+            this.btnCompare.Click += new System.EventHandler(this.btnCompareClick);
             // 
             // ofdHC
             // 
@@ -178,8 +178,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hash Compare";
             this.TopMost = true;
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.HashCompare_DragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.HashCompare_DragEnter);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.hashCompareDragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.hashCompareDragEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 

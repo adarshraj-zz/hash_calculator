@@ -1,13 +1,13 @@
 ﻿/*
  * Created by SharpDevelop.
- * User: Ads
+ * User: Adarsh
  * Date: 5/17/2008
  * Time: 8:50 AM
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 
-using HashCalculator;
+using HashAlgo;
 using System;
 using System.Windows.Forms;
 
@@ -23,8 +23,7 @@ namespace MD5_Calculator {
         private static void Main(string[] args) {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new HashForm());
         }
-
     }
 }

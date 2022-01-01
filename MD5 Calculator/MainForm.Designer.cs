@@ -1,13 +1,13 @@
 ﻿/*
  * Created by SharpDevelop.
- * User: Ads
+ * User: Adarsh
  * Date: 5/17/2008
  * Time: 8:50 AM
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
-namespace HashCalculator {
-    partial class MainForm {
+namespace HashAlgo {
+    partial class HashForm {
         /// <summary>
         /// Designer variable used to keep track of non-visual components.
         /// </summary>
@@ -32,7 +32,7 @@ namespace HashCalculator {
         /// not be able to load this method if it was changed manually.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HashForm));
             this.txtString = new System.Windows.Forms.TextBox();
             this.txtMD5 = new System.Windows.Forms.TextBox();
             this.txtSHA1 = new System.Windows.Forms.TextBox();
@@ -68,7 +68,7 @@ namespace HashCalculator {
             this.txtString.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtString.Size = new System.Drawing.Size(451, 32);
             this.txtString.TabIndex = 4;
-            this.txtString.TextChanged += new System.EventHandler(this.TextBox1TextChanged);
+            this.txtString.TextChanged += new System.EventHandler(this.txtBoxTextChanged);
             // 
             // txtMD5
             // 
@@ -292,7 +292,7 @@ namespace HashCalculator {
             this.lblAuthor.TabIndex = 15;
             this.lblAuthor.Text = "© Adarsh";
             // 
-            // MainForm
+            // HashForm
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,12 +309,12 @@ namespace HashCalculator {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "MainForm";
+            this.Name = "HashForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hash Calculator 0.1";
-            this.Load += new System.EventHandler(this.MainFormLoad);
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainFormDragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainFormDragEnter);
+            this.Load += new System.EventHandler(this.HashFormLoad);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.HashFormDragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.HashFormDragEnter);
             this.grpEntryField.ResumeLayout(false);
             this.grpEntryField.PerformLayout();
             this.grpAlgo.ResumeLayout(false);

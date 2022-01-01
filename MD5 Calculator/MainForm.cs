@@ -12,16 +12,16 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HashCalculator {
-    public partial class MainForm : Form {
+namespace HashAlgo {
+    public partial class HashForm : Form {
         private const string AppName = "Hash Calulator 0.1";
 
-        public MainForm() {
+        public HashForm() {
             // The InitializeComponent() call is required for Windows Forms designer support.
             InitializeComponent();
         }
 
-        void TextBox1TextChanged(object sender, EventArgs e) {
+        void txtBoxTextChanged(object sender, EventArgs e) {
             if (btnString.Checked) {
                 try {
                     btnFile.Checked = false;
@@ -53,7 +53,7 @@ namespace HashCalculator {
             }
         }
 
-        private void MainFormLoad(object sender, EventArgs e) {
+        private void HashFormLoad(object sender, EventArgs e) {
             btnFile.Checked = true;
         }
 
@@ -117,7 +117,7 @@ namespace HashCalculator {
             HashCompare.Show();
         }
 
-        private void MainFormDragEnter(object sender, DragEventArgs e) {
+        private void HashFormDragEnter(object sender, DragEventArgs e) {
             // Check if the Dataformat of the data can be accepted
             // (we only accept file drops from Explorer, etc.)
             if (e.Data.GetDataPresent(DataFormats.FileDrop)) {
@@ -127,7 +127,7 @@ namespace HashCalculator {
             }
         }
 
-        private void MainFormDragDrop(object sender, DragEventArgs e) {
+        private void HashFormDragDrop(object sender, DragEventArgs e) {
             // Extract the data from the DataObject-Container into a string list
             string[] FileList = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
