@@ -1,6 +1,5 @@
 ﻿#region Using directives
 
-using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -10,11 +9,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Hash Calculator 0.1")]
-[assembly: AssemblyDescription("Create and check string/file hash")]
+[assembly: AssemblyDescription("Create and check strings/file hash")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Hash Calculator")]
-[assembly: AssemblyCopyright("©WaxCodes")]
+[assembly: AssemblyCopyright("©Adarsh")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

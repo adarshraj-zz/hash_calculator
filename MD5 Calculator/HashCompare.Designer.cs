@@ -1,7 +1,5 @@
-﻿namespace MD5_Calculator
-{
-    partial class HashCompare
-    {
+﻿namespace HashAlgo {
+    partial class HashCompare {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,14 +22,13 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HashCompare));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSelectFile = new System.Windows.Forms.Label();
             this.txtSelectFile = new System.Windows.Forms.TextBox();
             this.btnFile = new System.Windows.Forms.Button();
             this.txtHash = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblHash = new System.Windows.Forms.Label();
             this.btnMd5 = new System.Windows.Forms.RadioButton();
             this.btnSha1 = new System.Windows.Forms.RadioButton();
             this.btnSha256 = new System.Windows.Forms.RadioButton();
@@ -43,14 +38,14 @@
             this.ofdHC = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
-            // label1
+            // lblSelectFile
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Select File";
+            this.lblSelectFile.AutoSize = true;
+            this.lblSelectFile.Location = new System.Drawing.Point(10, 10);
+            this.lblSelectFile.Name = "lblSelectFile";
+            this.lblSelectFile.Size = new System.Drawing.Size(55, 13);
+            this.lblSelectFile.TabIndex = 0;
+            this.lblSelectFile.Text = "Select File";
             // 
             // txtSelectFile
             // 
@@ -68,7 +63,7 @@
             this.btnFile.TabIndex = 2;
             this.btnFile.Text = "Open";
             this.btnFile.UseVisualStyleBackColor = true;
-            this.btnFile.Click += new System.EventHandler(this.btnFile_Click);
+            this.btnFile.Click += new System.EventHandler(this.btnFileClick);
             // 
             // txtHash
             // 
@@ -79,14 +74,14 @@
             this.txtHash.Size = new System.Drawing.Size(383, 32);
             this.txtHash.TabIndex = 3;
             // 
-            // label2
+            // lblHash
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Enter Hash";
+            this.lblHash.AutoSize = true;
+            this.lblHash.Location = new System.Drawing.Point(12, 36);
+            this.lblHash.Name = "lblHash";
+            this.lblHash.Size = new System.Drawing.Size(60, 13);
+            this.lblHash.TabIndex = 4;
+            this.lblHash.Text = "Enter Hash";
             // 
             // btnMd5
             // 
@@ -151,7 +146,7 @@
             this.btnCompare.TabIndex = 10;
             this.btnCompare.Text = "Check";
             this.btnCompare.UseVisualStyleBackColor = true;
-            this.btnCompare.Click += new System.EventHandler(this.btnCompare_Click);
+            this.btnCompare.Click += new System.EventHandler(this.btnCompareClick);
             // 
             // ofdHC
             // 
@@ -169,11 +164,11 @@
             this.Controls.Add(this.btnSha256);
             this.Controls.Add(this.btnSha1);
             this.Controls.Add(this.btnMd5);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblHash);
             this.Controls.Add(this.txtHash);
             this.Controls.Add(this.btnFile);
             this.Controls.Add(this.txtSelectFile);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSelectFile);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -183,8 +178,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hash Compare";
             this.TopMost = true;
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.HashCompare_DragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.HashCompare_DragEnter);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.hashCompareDragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.hashCompareDragEnter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,11 +187,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSelectFile;
         private System.Windows.Forms.TextBox txtSelectFile;
         private System.Windows.Forms.Button btnFile;
         private System.Windows.Forms.TextBox txtHash;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblHash;
         private System.Windows.Forms.RadioButton btnMd5;
         private System.Windows.Forms.RadioButton btnSha1;
         private System.Windows.Forms.RadioButton btnSha256;
