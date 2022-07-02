@@ -1,4 +1,4 @@
-hash_calculator
+Hash Calculator
 ===============
 
-Calculate and Compares Hash
+Calculate and Compares Hash of files and texts.
