@@ -256,7 +256,7 @@ namespace HashAlgo {
             // 
             this.btnClear.Location = new System.Drawing.Point(381, 266);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(93, 21);
+            this.btnClear.Size = new System.Drawing.Size(93, 22);
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Clear All";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -266,7 +266,7 @@ namespace HashAlgo {
             // 
             this.btnCompareTool.Location = new System.Drawing.Point(6, 266);
             this.btnCompareTool.Name = "btnCompareTool";
-            this.btnCompareTool.Size = new System.Drawing.Size(142, 20);
+            this.btnCompareTool.Size = new System.Drawing.Size(142, 22);
             this.btnCompareTool.TabIndex = 13;
             this.btnCompareTool.Text = "Hash Comparison Tool";
             this.btnCompareTool.UseVisualStyleBackColor = true;
@@ -276,7 +276,7 @@ namespace HashAlgo {
             // 
             this.btnAbout.Location = new System.Drawing.Point(480, 266);
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(58, 21);
+            this.btnAbout.Size = new System.Drawing.Size(58, 22);
             this.btnAbout.TabIndex = 14;
             this.btnAbout.Text = "About";
             this.btnAbout.UseVisualStyleBackColor = true;
@@ -297,7 +297,7 @@ namespace HashAlgo {
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 290);
+            this.ClientSize = new System.Drawing.Size(550, 292);
             this.Controls.Add(this.lblAuthor);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnCompareTool);
@@ -306,7 +306,7 @@ namespace HashAlgo {
             this.Controls.Add(this.grpAlgo);
             this.Controls.Add(this.grpEntryField);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "HashForm";
