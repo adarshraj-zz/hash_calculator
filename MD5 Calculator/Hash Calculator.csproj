@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Hash_Calculator</RootNamespace>
+    <RootNamespace>HashCalculator</RootNamespace>
     <AssemblyName>Hash Calculator</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <ApplicationIcon>Search.ico</ApplicationIcon>
     <StartupObject>MD5_Calculator.Program</StartupObject>
     <IsWebBootstrapper>false</IsWebBootstrapper>

@@ -311,7 +311,7 @@ namespace HashAlgo {
             this.MaximizeBox = false;
             this.Name = "HashForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hash Calculator 0.1";
+            this.Text = "Hash Calculator 0.2";
             this.Load += new System.EventHandler(this.HashFormLoad);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.HashFormDragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.HashFormDragEnter);
