@@ -13,27 +13,33 @@ namespace HashAlgo {
             if (ofdHC.ShowDialog() == DialogResult.OK) {
                 fileName = ofdHC.FileName;
                 txtSelectFile.Text = fileName;
+            }else {
+                MessageBox.Show("Enter all data");
             }
         }
 
         private void btnCompareClick(object sender, EventArgs e) {
-            if (btnMd5.Checked && fileName != "") {
-                hashvalue = FileHasher.MD5Hash(fileName);
-                showMsg(hashvalue, txtHash.Text);
-            } else if (btnSha1.Checked && fileName != null) {
-                hashvalue = FileHasher.SHA1Hash(fileName);
-                showMsg(hashvalue, txtHash.Text);
-            } else if (btnSha256.Checked && fileName != null) {
-                hashvalue = FileHasher.SHA256Hash(fileName);
-                showMsg(hashvalue, txtHash.Text);
-            } else if (btnSha384.Checked && fileName != null) {
-                hashvalue = FileHasher.SHA384Hash(fileName);
-                showMsg(hashvalue, txtHash.Text);
-            } else if (btnSha512.Checked && fileName != null) {
-                hashvalue = FileHasher.SHA512Hash(fileName);
-                showMsg(hashvalue, txtHash.Text);
-            } else {
-                MessageBox.Show("Enter all data");
+            if (!String.IsNullOrEmpty(fileName)) { 
+                if (btnMd5.Checked && fileName != "") {
+                    hashvalue = FileHasher.MD5Hash(fileName);
+                    showMsg(hashvalue, txtHash.Text);
+                } else if (btnSha1.Checked && fileName != null) {
+                    hashvalue = FileHasher.SHA1Hash(fileName);
+                    showMsg(hashvalue, txtHash.Text);
+                } else if (btnSha256.Checked && fileName != null) {
+                    hashvalue = FileHasher.SHA256Hash(fileName);
+                    showMsg(hashvalue, txtHash.Text);
+                } else if (btnSha384.Checked && fileName != null) {
+                    hashvalue = FileHasher.SHA384Hash(fileName);
+                    showMsg(hashvalue, txtHash.Text);
+                } else if (btnSha512.Checked && fileName != null) {
+                    hashvalue = FileHasher.SHA512Hash(fileName);
+                    showMsg(hashvalue, txtHash.Text);
+                } else {
+                    MessageBox.Show("Enter all data");
+                }
+            }else {
+                    MessageBox.Show("Enter all data");
             }
         }
 

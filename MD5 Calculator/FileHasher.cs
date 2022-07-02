@@ -3,60 +3,43 @@ using System.Security.Cryptography;
 
 namespace HashAlgo {
     class FileHasher {
-        private static FileStream GetFileStream(string filePath) {
-            return (new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
-        }
-
-        public static string GetHash(byte[] input) {
-            string fileHash;
-            fileHash = System.BitConverter.ToString(input);
-            fileHash = fileHash.Replace("-", "");
-            return fileHash.ToLower();
-        }
-
         public static string MD5Hash(string filePath) {
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            FileStream MD5Stream;
-
-            MD5Stream = GetFileStream(filePath);
-            byte[] fileMD5 = md5.ComputeHash(MD5Stream);
-            return (GetHash(fileMD5));
+            return getHashedValue(filePath, new MD5CryptoServiceProvider());
         }
 
         public static string SHA1Hash(string filePath) {
-            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
-            FileStream Sha1Stream;
-
-            Sha1Stream = GetFileStream(filePath);
-            byte[] fileSha1 = sha1.ComputeHash(Sha1Stream);
-            return (GetHash(fileSha1));
+            return getHashedValue(filePath, new SHA1CryptoServiceProvider());
         }
 
         public static string SHA256Hash(string filePath) {
-            SHA256Managed sha256 = new SHA256Managed();
-            FileStream Sha256Stream;
-
-            Sha256Stream = GetFileStream(filePath);
-            byte[] fileSha256 = sha256.ComputeHash(Sha256Stream);
-            return (GetHash(fileSha256));
+            return getHashedValue(filePath, new SHA256Managed());
         }
 
         public static string SHA384Hash(string filePath) {
-            SHA384Managed sha384 = new SHA384Managed();
-            FileStream Sha384Stream;
-
-            Sha384Stream = GetFileStream(filePath);
-            byte[] fileSha384 = sha384.ComputeHash(Sha384Stream);
-            return (GetHash(fileSha384));
+            return getHashedValue(filePath, new SHA384Managed());
         }
 
         public static string SHA512Hash(string filePath) {
-            SHA512Managed sha512 = new SHA512Managed();
-            FileStream Sha512Stream;
+           return getHashedValue(filePath, new SHA512Managed());
+        }
 
-            Sha512Stream = GetFileStream(filePath);
-            byte[] fileSha512 = sha512.ComputeHash(Sha512Stream);
-            return (GetHash(fileSha512));
+        private static string getHashedValue(string filePath, HashAlgorithm algorithm) {
+            FileStream hashStream = getFileStream(filePath);
+            byte[] hashBytes = algorithm.ComputeHash(hashStream);
+            return (getHash(hashBytes));
+        }
+
+        private static FileStream getFileStream(string filePath) {
+            if(File.Exists(filePath)) {
+                return (new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
+            } else {
+                return null;
+            }
+        }
+
+        public static string getHash(byte[] input) {
+            string fileHash = System.BitConverter.ToString(input);
+            return fileHash.Replace("-", "").ToLower();
         }
     }
 }

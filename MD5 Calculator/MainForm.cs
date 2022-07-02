@@ -42,11 +42,11 @@ namespace HashAlgo {
                     byte[] dataSha384 = sha384.ComputeHash(Encoding.Default.GetBytes(txtString.Text));
                     byte[] dataSha512 = sha512.ComputeHash(Encoding.Default.GetBytes(txtString.Text));
 
-                    txtMD5.Text = FileHasher.GetHash(dataMd5);
-                    txtSHA1.Text = FileHasher.GetHash(dataSha1);
-                    txtSHA256.Text = FileHasher.GetHash(dataSha256);
-                    txtSHA384.Text = FileHasher.GetHash(dataSha384);
-                    txtSHA512.Text = FileHasher.GetHash(dataSha512);
+                    txtMD5.Text = FileHasher.getHash(dataMd5);
+                    txtSHA1.Text = FileHasher.getHash(dataSha1);
+                    txtSHA256.Text = FileHasher.getHash(dataSha256);
+                    txtSHA384.Text = FileHasher.getHash(dataSha384);
+                    txtSHA512.Text = FileHasher.getHash(dataSha512);
                 } catch (Exception) {
                     MessageBox.Show("Error");
                 }
